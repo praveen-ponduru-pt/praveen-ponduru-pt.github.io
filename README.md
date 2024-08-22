@@ -1,4 +1,5 @@
-# praveen-ponduru-pt.github.io
+
+
 - 👋 Hi, I’m Praveen Kumar
 - 👀 I’m interested in learning new automation frameworks and tools...
 - 🌱 I’m currently learning Playwright with JavaScript...
