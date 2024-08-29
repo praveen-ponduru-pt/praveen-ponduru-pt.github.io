@@ -1,20 +1,111 @@
-a:link,
-a:visited {
-    background-color: #0db6ff;
-    color: white;
-    padding: 15px 25px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-a:hover,
-a:active {
-    background-color: red;
+img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    /* Ensures the image covers the window */
+    object-position: center;
+    /* Centers the image */
+}
+
+.image-container {
+    position: relative;
+    /* Enables positioning of text relative to the container */
+    width: 100%;
+    /* Set the width of the container */
+    max-width: 100%;
+    /* Optional: Max width of the container */
+    margin: auto;
+    /* Center the container horizontally */
+}
+
+.image-container img {
+    width: 100%;
+    /* Make the image fill the container */
+    height: auto;
+    /* Maintain aspect ratio */
+    display: block;
+    /* Remove the bottom space under the image */
+}
+
+.text-overlay {
+    position: absolute;
+    /* Position the text absolutely within the container */
+    top: 50%;
+    /* Position the text in the center vertically */
+    left: 30%;
+    /* Position the text in the center horizontally */
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+    /*font-weight: bold;
+            /*text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            /* Optional: Add shadow to make text stand out */
+    text-align: left;
+    align-items: left;
 }
 
 a {
-    border-radius: 10px;
-    border: 3px solid black;
-    padding: 20px;
+    color: white;
+}
+
+a:hover {
+    color: rgb(3, 255, 179)
+}
+
+#toast {
+    visibility: hidden;
+    min-width: 150px;
+    background-color: #008db0;
+    color: #fff;
+    text-align: center;
+    border-radius: 7px;
+    padding: 15px;
+    position: fixed;
+    z-index: 1;
+    right: 10%;
+    top: 10px;
+    font-size: 17px;
+}
+
+#toast.show {
+    visibility: visible;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        from {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 0;
+        }
+    }
 }
